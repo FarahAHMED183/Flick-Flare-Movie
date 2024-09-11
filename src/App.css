@@ -1,0 +1,181 @@
+/* General styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding-top: 60px;
+}
+
+/* Star icon styles */
+.star-icon {
+  font-size: 24px;
+  color: gray; /* Default color */
+  transition: color 0.3s ease;
+  position: absolute; /* Position it within the card */
+  top: 10px; /* Adjust top position */
+  right: 10px; /* Adjust right position */
+  cursor: pointer;
+}
+
+.star-icon.active {
+  color: gold; /* Color when active/favorite */
+}
+
+/* Main container styles */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Movies list styles */
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+  list-style: none;
+  margin: 0;
+  gap: 20px;
+}
+
+/* Movie card styles */
+.movie-card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  background-color: #222;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+  opacity: 0.95;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Movie image styles */
+.movie-image {
+  width: 100%;
+  height: 60%;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+/* Container for the title */
+.title-container {
+  height: 40%;
+  width: 100%;
+  background: rgba(217, 207, 207, 0.8);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Movie title styles */
+.movie-title {
+  margin: 0;
+  font-size: 1.2em;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #ff6f61;
+  font-weight: 300;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover effects */
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+.movie-image:hover {
+  transform: scale(1.1);
+}
+
+.movie-title:hover {
+  color: #3498db;
+  transform: translateY(-5px);
+}
+
+/* Search bar styles */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #464141;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  background-color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Pagination controls styles */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  background-color: rgb(73, 73, 203);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination-controls button:hover {
+  background-color: #e05d4f;
+  transform: scale(1.05);
+}
+
+.pagination-controls button:disabled {
+  background-color: #333;
+  cursor: not-allowed;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .movies-list {
+    gap: 15px;
+  }
+
+  .movie-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .movie-image {
+    height: 50%;
+  }
+
+  .title-container {
+    height: auto;
+    overflow: hidden;
+  }
+}

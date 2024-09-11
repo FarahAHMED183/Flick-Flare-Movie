@@ -1,0 +1,139 @@
+/* General styles */
+
+  
+  /* Remove underline from links */
+  .movie-link {
+    text-decoration: none; /* Removes underline from link */
+    color: inherit; /* Inherits the color of the parent element */
+  }
+  
+  /* Star icon styles */
+  .star-icon {
+    font-size: 24px;
+    color: gold; 
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Main container styles */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(107, 103, 103, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Favorites list styles */
+  .favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    list-style: none;
+    margin: 0;
+    gap: 20px;
+    position: relative;
+  }
+  
+  /* Movie card styles */
+  .movie-card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+    opacity: 0.95;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  /* Movie image styles */
+  .movie-image {
+    width: 100%;
+    height: 60%;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  /* Container for the title */
+  .title-container {
+    height: 40%;
+    width: 100%;
+    background: rgba(217, 207, 207, 0.8);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Movie title styles */
+  .movie-title {
+    margin: 0;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: whitesmoke;
+    font-weight: 300;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  /* Hover effects */
+  .movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+  }
+  
+  .movie-image:hover {
+    transform: scale(1.1);
+  }
+  
+  .movie-title:hover {
+    color: #3498db;
+    transform: translateY(-5px);
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+    }
+  
+    .favorites-list {
+      gap: 15px;
+    }
+  
+    .movie-card {
+      width: 100%;
+      height: auto;
+    }
+  
+    .movie-image {
+      height: 50%;
+    }
+  
+    .title-container {
+      height: auto;
+      overflow: hidden;
+    }
+  }
+  .movieItem {
+    list-style-type: none;
+  }
+  
+  .card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  
